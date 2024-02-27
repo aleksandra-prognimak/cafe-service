@@ -1,137 +1,270 @@
 [
   {
-    "model": "taxi.manufacturer",
+    "model": "cafe.dishtype",
     "pk": 1,
     "fields": {
-      "name": "Lincoln",
-      "country": "USA"
+      "name": "Crepes"
     }
   },
   {
-    "model": "taxi.manufacturer",
+    "model": "cafe.dishtype",
     "pk": 2,
     "fields": {
-      "name": "Ford Motor Company",
-      "country": "USA"
+      "name": "Hot Coffee"
     }
   },
   {
-    "model": "taxi.manufacturer",
+    "model": "cafe.dishtype",
     "pk": 3,
     "fields": {
-      "name": "General Motors",
-      "country": "USA"
+      "name": "Cold Coffee"
     }
   },
   {
-    "model": "taxi.manufacturer",
+    "model": "cafe.dishtype",
     "pk": 4,
     "fields": {
-      "name": "Toyota",
-      "country": "Japan"
+      "name": "Milk Tea"
     }
   },
   {
-    "model": "taxi.manufacturer",
+    "model": "cafe.dishtype",
     "pk": 5,
     "fields": {
-      "name": "Suzuki",
-      "country": "Japan"
+      "name": "Fruit Tea"
     }
   },
   {
-    "model": "taxi.manufacturer",
+    "model": "cafe.dishtype",
     "pk": 6,
     "fields": {
-      "name": "Mitsubishi",
-      "country": "Japan"
+      "name": "Other drinks"
     }
   },
   {
-    "model": "taxi.manufacturer",
-    "pk": 7,
-    "fields": {
-      "name": "Volkswagen",
-      "country": "Germany"
-    }
-  },
-  {
-    "model": "taxi.manufacturer",
-    "pk": 8,
-    "fields": {
-      "name": "Daimler",
-      "country": "Germany"
-    }
-  },
-  {
-    "model": "taxi.manufacturer",
-    "pk": 9,
-    "fields": {
-      "name": "FCA",
-      "country": "Italy"
-    }
-  },
-  {
-    "model": "taxi.manufacturer",
-    "pk": 10,
-    "fields": {
-      "name": "Renault",
-      "country": "France"
-    }
-  },
-  {
-    "model": "taxi.manufacturer",
-    "pk": 11,
-    "fields": {
-      "name": "SAIC",
-      "country": "China"
-    }
-  },
-  {
-    "model": "taxi.manufacturer",
-    "pk": 12,
-    "fields": {
-      "name": "Mazda",
-      "country": "Japan"
-    }
-  },
-  {
-    "model": "taxi.manufacturer",
-    "pk": 13,
-    "fields": {
-      "name": "BAIC",
-      "country": "China"
-    }
-  },
-  {
-    "model": "taxi.manufacturer",
-    "pk": 14,
-    "fields": {
-      "name": "BMW",
-      "country": "Germany"
-    }
-  },
-  {
-    "model": "taxi.driver",
+    "model": "cafe.ingredient",
     "pk": 1,
     "fields": {
-      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "name": "Milk"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 2,
+    "fields": {
+      "name": "Egg"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 3,
+    "fields": {
+      "name": "Sugar"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 4,
+    "fields": {
+      "name": "Flour"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 5,
+    "fields": {
+      "name": "Butter"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 6,
+    "fields": {
+      "name": "Strawberry"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 7,
+    "fields": {
+      "name": "Banana"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 8,
+    "fields": {
+      "name": "Cream"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 9,
+    "fields": {
+      "name": "Nutella"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 10,
+    "fields": {
+      "name": "Chocolate"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 11,
+    "fields": {
+      "name": "Kiwi"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 12,
+    "fields": {
+      "name": "Blueberry"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 13,
+    "fields": {
+      "name": "Raspberry"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 14,
+    "fields": {
+      "name": "Water"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 15,
+    "fields": {
+      "name": "Coffee"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 16,
+    "fields": {
+      "name": "Black tea"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 17,
+    "fields": {
+      "name": "Green tea"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 18,
+    "fields": {
+      "name": "Jasmine tea"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 19,
+    "fields": {
+      "name": "Matcha tea"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 20,
+    "fields": {
+      "name": "Oreo"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 21,
+    "fields": {
+      "name": "Passion Fruit"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 22,
+    "fields": {
+      "name": "Pineapple"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 23,
+    "fields": {
+      "name": "Mango"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 24,
+    "fields": {
+      "name": "Lychee"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 25,
+    "fields": {
+      "name": "Orange"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 26,
+    "fields": {
+      "name": "Apple"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 27,
+    "fields": {
+      "name": "Coca-Cola"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 28,
+    "fields": {
+      "name": "Fanta"
+    }
+  },
+  {
+    "model": "cafe.ingredient",
+    "pk": 29,
+    "fields": {
+      "name": "Sprite"
+    }
+  },
+  {
+    "model": "cafe.cook",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$7D3LrH0z8pccHKNktluZfZ$YLkIlI8kWyID+jcmoltwRgg8dqFwjeAIkM5WD7LWWso=",
       "last_login": "2022-08-08T14:14:03Z",
       "is_superuser": true,
       "username": "admin.user",
       "first_name": "Admin",
       "last_name": "User",
-      "email": "admin.user@taxi.com",
+      "email": "admin.user@cafe.com",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2022-08-08T13:58:29Z",
-      "license_number": "ADM56984",
+      "years_of_experience": 10,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 2,
     "fields": {
       "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
@@ -140,17 +273,17 @@
       "username": "joyce.byers",
       "first_name": "Joyce",
       "last_name": "Byers",
-      "email": "joyce.byers@taxi.com",
+      "email": "joyce.byers@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-08T14:17:04Z",
-      "license_number": "JOY26458",
+      "years_of_experience": 3,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 3,
     "fields": {
       "password": "pbkdf2_sha256$320000$QtPol3T7x9quBj4BnbnVwW$UwT4kihkRfSvQEWEeuqVKwMgis2ikKVZfJDBcQMvOKY=",
@@ -159,17 +292,17 @@
       "username": "jim.hopper",
       "first_name": "Jim",
       "last_name": "Hopper",
-      "email": "jim.hopper@taxi.com",
+      "email": "jim.hopper@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-08T14:19:09Z",
-      "license_number": "JIM26531",
+      "years_of_experience": 0,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 4,
     "fields": {
       "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
@@ -178,17 +311,17 @@
       "username": "jonathan.byers",
       "first_name": "Jonathan",
       "last_name": "Byers",
-      "email": "jonathan.byers@taxi.com",
+      "email": "jonathan.byers@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-08T14:19:09Z",
-      "license_number": "JON26231",
+      "years_of_experience": 1,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 5,
     "fields": {
       "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
@@ -197,17 +330,17 @@
       "username": "dustin.henderson",
       "first_name": "Dustin",
       "last_name": "Henderson",
-      "email": "dustin.henderson@taxi.com",
+      "email": "dustin.henderson@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-09T14:19:09Z",
-      "license_number": "DUS25131",
+      "years_of_experience": 7,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 6,
     "fields": {
       "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
@@ -216,17 +349,17 @@
       "username": "mike.wheeler",
       "first_name": "Mike",
       "last_name": "Wheeler",
-      "email": "mike.wheeler@taxi.com",
+      "email": "mike.wheeler@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-09T14:19:09Z",
-      "license_number": "MIK25131",
+      "years_of_experience": 3,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 7,
     "fields": {
       "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
@@ -235,17 +368,17 @@
       "username": "lucas.sinclair",
       "first_name": "Lucas",
       "last_name": "Sinclair",
-      "email": "lucas.sinclair@taxi.com",
+      "email": "lucas.sinclair@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-09T14:19:09Z",
-      "license_number": "LUK35131",
+      "years_of_experience": 3,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 8,
     "fields": {
       "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
@@ -254,17 +387,17 @@
       "username": "nancy.wheeler",
       "first_name": "Nancy",
       "last_name": "Wheeler",
-      "email": "nancy.wheeler@taxi.com",
+      "email": "nancy.wheeler@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-09T14:19:09Z",
-      "license_number": "NAN34131",
+      "years_of_experience": 2,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
+    "model": "cafe.cook",
     "pk": 9,
     "fields": {
       "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
@@ -273,231 +406,433 @@
       "username": "martin.brenner",
       "first_name": "Martin",
       "last_name": "Brenner",
-      "email": "martin.brenner@taxi.com",
+      "email": "martin.brenner@cafe.com",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2022-08-09T14:19:09Z",
-      "license_number": "MAR34231",
+      "years_of_experience": 5,
       "groups": [],
       "user_permissions": []
     }
   },
   {
-    "model": "taxi.driver",
-    "pk": 10,
-    "fields": {
-      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
-      "last_login": null,
-      "is_superuser": false,
-      "username": "billy.hargrove",
-      "first_name": "Billy",
-      "last_name": "Hargrove",
-      "email": "billy.hargrove@taxi.com",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2022-08-09T14:19:09Z",
-      "license_number": "BIL39231",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-    {
-    "model": "taxi.driver",
-    "pk": 11,
-    "fields": {
-      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
-      "last_login": null,
-      "is_superuser": false,
-      "username": "bob.newby",
-      "first_name": "Bob",
-      "last_name": "Newby",
-      "email": "bob.newby@taxi.com",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2022-08-09T14:19:09Z",
-      "license_number": "BOB09631",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 1,
     "fields": {
-      "model": "Lincoln Continental",
-      "manufacturer": 1,
-      "drivers": [
-        3
-      ]
+      "name": "Strawberry Banana Classic Crepe",
+      "description": "Indulge in the perfect combination of ripe strawberries, fresh banana slices, fluffy whipped cream, and luscious Nutella. Our Strawberry Banana Crepe is a delightful treat that will satisfy your cravings for a sweet and fruity delight.",
+      "price": 12.00,
+      "dish_type": 1,
+      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8],
+      "cooks": [1, 5, 9]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 2,
     "fields": {
-      "model": "Toyota Yaris",
-      "manufacturer": 4,
-      "drivers": [
-        2,
-        3
-      ]
+      "name": "Strawberry Escape Crepe",
+      "description": "Succulent strawberries, velvety whipped cream and Nutella come together to create a dessert that will transport you to a world of pure decadence.",
+      "price": 13.00,
+      "dish_type": 1,
+      "ingredients": [1, 2, 3, 4, 5, 6, 8, 9],
+      "cooks": [1, 7]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 3,
     "fields": {
-      "model": "Suzuki Vitara",
-      "manufacturer": 5,
-      "drivers": [
-        1,
-        2,
-        5
-      ]
+      "name": "Tropical Crepe",
+      "description": "Embark on a journey to the tropics with our Tropical Crepe, a heavenly delight filled with the luscious combination of sweet strawberries and tangy kiwi, topped with a fluffy cloud of whipped cream, and finished with your choice of rich and decadent chocolate, offering a mouthwatering experience that brings a taste of paradise to your palate.",
+      "price": 13.00,
+      "dish_type": 1,
+      "ingredients": [1, 2, 3, 4, 5, 6, 8, 10, 11],
+      "cooks": [1, 5, 7]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 4,
     "fields": {
-      "model": "Mitsubishi Eclipse",
-      "manufacturer": 6,
-      "drivers": [
-        1
-      ]
+      "name": "Blueberry Paradise Crepe",
+      "description": "Experience a taste of heaven with our Blueberry Paradise Crepe, where each delicate crepe is generously filled with succulent blueberries, creating a delightful burst of fruity sweetness that transports you to a paradise of flavors in every blissful bite.",
+      "price": 12.00,
+      "dish_type": 1,
+      "ingredients": [1, 2, 3, 4, 5, 8, 12],
+      "cooks": [1, 9]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 5,
     "fields": {
-      "model": "Mitsubishi Lancer",
-      "manufacturer": 6,
-      "drivers": [
-        11
-      ]
+      "name": "Mixed Berries Crepe",
+      "description": "Experience a burst of vibrant flavors with our Mixed Berries Crepe. This delightful creation features a medley of juicy strawberries, plump blueberries, and tangy raspberries, generously topped with fluffy whipped cream and drizzled with luscious strawberry syrup. It's a symphony of taste that will leave you craving for more.",
+      "price": 13.00,
+      "dish_type": 1,
+      "ingredients": [1, 2, 3, 4, 5, 6, 8, 12, 13],
+      "cooks": [5, 7, 9]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 6,
     "fields": {
-      "model": "Ford Focus",
-      "manufacturer": 2,
-      "drivers": [
-        4
-      ]
+      "name": "Casual Sunday",
+      "description": "Embrace the laid-back vibes of a lazy Sunday morning with our Casual Sunday Crepe. Savor the simplicity of ripe bananas, heavenly whipped cream, and a generous spread of Nutella, all wrapped in a warm, delicate crepe. It's a comforting and indulgent treat perfect for any day of the week.",
+      "price": 12.00,
+      "dish_type": 1,
+      "ingredients": [1, 2, 3, 4, 5, 7, 8, 9],
+      "cooks": [5, 9]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 7,
     "fields": {
-      "model": "Cadillac Escalade",
-      "manufacturer": 3,
-      "drivers": [
-        5
-      ]
+      "name": "Hot Coffee",
+      "description": "Enjoy a comforting and familiar experience with our Hot Coffee. Brewed to perfection, this small-sized cup of coffee offers a simple yet satisfying beverage that will warm your soul and provide the familiar taste and aroma that you love.",
+      "price": 1.00,
+      "dish_type": 2,
+      "ingredients": [14, 15],
+      "cooks": [2]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 8,
     "fields": {
-      "model": "Arcfox Alpha-S",
-      "manufacturer": 13,
-      "drivers": [
-      ]
+      "name": "Americano",
+      "description": "Experience the bold and robust character of our Americano. Crafted by expertly blending shots of espresso with hot water, this satisfying beverage delivers a smooth yet intense flavor profile, allowing the true essence of the coffee to shine through, making it a perfect choice for those seeking a bold and invigorating coffee experience.",
+      "price": 3.00,
+      "dish_type": 2,
+      "ingredients": [14, 15],
+      "cooks": [2]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 9,
     "fields": {
-      "model": "Beijing EX5",
-      "manufacturer": 13,
-      "drivers": [
-        9
-      ]
+      "name": "Double Espresso",
+      "description": "Elevate your caffeine fix with our Double Espresso. This concentrated and potent shot of pure espresso is carefully crafted to deliver a strong and full-bodied flavor that will awaken your senses and provide a powerful boost of energy.",
+      "price": 3.75,
+      "dish_type": 2,
+      "ingredients": [14, 15],
+      "cooks": [2]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 10,
     "fields": {
-      "model": "MG 5 II",
-      "manufacturer": 11,
-      "drivers": [
-        8
-      ]
+      "name": "Latte",
+      "description": "Indulge in the creamy and comforting flavors of our Latte. With its perfect combination of smooth espresso and steamed milk, topped with a touch of velvety foam, this drink offers a balanced and milky flavor profile that will envelop your palate with its delightful richness.",
+      "price": 4.00,
+      "dish_type": 2,
+      "ingredients": [1, 14, 15],
+      "cooks": [6]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 11,
     "fields": {
-      "model": "Rising Auto ER6",
-      "manufacturer": 11,
-      "drivers": [
-        7,
-        3
-      ]
+      "name": "Cappuccino",
+      "description": "Discover the art of balance with our Cappuccino. Crafted by expertly combining equal parts espresso, steamed milk, and silky milk foam, this classic Italian favorite offers a harmonious interplay of bold espresso and creamy textures, resulting in a delightful and satisfying coffee experience.",
+      "price": 3.75,
+      "dish_type": 2,
+      "ingredients": [1, 14, 15],
+      "cooks": [6]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 12,
     "fields": {
-      "model": "SP250",
-      "manufacturer": 8,
-      "drivers": [
-        6
-      ]
+      "name": "Flat White",
+      "description": "Immerse yourself in the velvety smoothness of our Flat White. This harmonious blend of creamy textured milk and strong espresso creates a balanced and indulgent drink that offers a rich and luxurious experience with every sip.",
+      "price": 3.75,
+      "dish_type": 2,
+      "ingredients": [1, 14, 15],
+      "cooks": [6]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 13,
     "fields": {
-      "model": "Daimler Sovereign",
-      "manufacturer": 8,
-      "drivers": [
-        11,
-        7
-      ]
+      "name": "Mocha",
+      "description": "Treat yourself to the irresistible blend of chocolate and coffee with our Mocha. This decadent beverage combines the richness of espresso with velvety chocolate and steamed milk, creating a luscious and indulgent drink that will satisfy your cravings for both coffee and chocolate in one delightful sip.",
+      "price": 4.25,
+      "dish_type": 2,
+      "ingredients": [1, 10, 14, 15],
+      "cooks": [6]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 14,
     "fields": {
-      "model": "X5 M",
-      "manufacturer": 14,
-      "drivers": [
-        10
-      ]
+      "name": "Hot Brew",
+      "description": "Delight in the comforting warmth and aromatic flavors of our Hot Brew. Made with care and precision, this classic coffee beverage offers a soothing and invigorating experience that will envelop you in its rich and flavorful embrace.",
+      "price": 2.75,
+      "dish_type": 2,
+      "ingredients": [14, 15],
+      "cooks": [2]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 15,
     "fields": {
-      "model": "Floride",
-      "manufacturer": 10,
-      "drivers": [
-        9
-      ]
+      "name": "Iced Coffee",
+      "description": "Immerse yourself in a moment of refreshing bliss with our Iced Coffee, a delightful and chilled beverage that combines the richness of freshly brewed coffee with the coolness of ice, offering a revitalizing and invigorating experience that awakens your senses and leaves you feeling rejuvenated.",
+      "price": 3.00,
+      "dish_type": 3,
+      "ingredients": [14, 15],
+      "cooks": [4]
     }
   },
   {
-    "model": "taxi.car",
+    "model": "cafe.dish",
     "pk": 16,
     "fields": {
-      "model": "MX-30",
-      "manufacturer": 12,
-      "drivers": [
-        4
-      ]
+      "name": "Iced Americano",
+      "description": "Awaken your senses with the invigorating simplicity of our Iced Americano. This classic coffee beverage is expertly crafted, combining shots of rich espresso with chilled water, resulting in a bold and refreshing drink that offers a delightful balance of smoothness and intensity, perfect for providing a cool and satisfying pick-me-up.",
+      "price": 3.50,
+      "dish_type": 3,
+      "ingredients": [14, 15],
+      "cooks": [4]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 17,
+    "fields": {
+      "name": "Iced Latte",
+      "description": "Indulge in creamy perfection with our Iced Latte. This delightful beverage combines rich espresso with cold milk, resulting in a smooth and refreshing treat that offers a perfect balance of bold coffee flavor and creamy indulgence, making it an ideal choice for coffee lovers seeking a cool and satisfying pick-me-up.",
+      "price": 4.00,
+      "dish_type": 3,
+      "ingredients": [1, 14, 15],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 18,
+    "fields": {
+      "name": "Iced Mocha",
+      "description": "Experience the perfect harmony of rich chocolate and bold coffee with our Iced Mocha. This delightful beverage combines velvety chocolate with smooth espresso and chilled milk, creating a decadent and refreshing indulgence that will tantalize your taste buds and provide a delightful pick-me-up on a warm day.",
+      "price": 4.25,
+      "dish_type": 3,
+      "ingredients": [1, 10, 14, 15],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 19,
+    "fields": {
+      "name": "Cold Brew",
+      "description": "Savor the pure essence of smoothness and depth with our Cold Brew. Carefully brewed over time, this refreshing beverage offers a perfectly balanced and richly flavored coffee experience that is bold yet incredibly smooth, providing a cool and invigorating treat that will awaken your senses with every sip.",
+      "price": 4.25,
+      "dish_type": 3,
+      "ingredients": [14, 15],
+      "cooks": [4]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 20,
+    "fields": {
+      "name": "Milk Tea",
+      "description": "Delight in the harmonious blend of fragrant loose leaf black tea, ice, and your choice of milk in our Milk Tea. This classic beverage offers a refreshing and creamy experience that perfectly balances the robust flavors of tea with the smoothness of milk.",
+      "price": 5.50,
+      "dish_type": 4,
+      "ingredients": [1, 14, 16],
+      "cooks": [4]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 21,
+    "fields": {
+      "name": "Jasmine Milk Tea",
+      "description": "Embark on a sensory journey with our Jasmine Milk Tea. Crafted with the delicate flavors of loose leaf jasmine tea and your choice of milk, this aromatic and soothing beverage provides a tranquil and enjoyable experience, allowing the floral notes of jasmine to meld seamlessly with the creamy richness of milk.",
+      "price": 6.00,
+      "dish_type": 4,
+      "ingredients": [1, 14, 18],
+      "cooks": [4]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 22,
+    "fields": {
+      "name": "Matcha Milk Tea",
+      "description": "Immerse yourself in the rich and ceremonial flavors of our Matcha Milk Tea. Created with organic Japanese matcha and your choice of milk, this creamy and indulgent beverage offers a velvety smooth texture and a robust green tea flavor that will transport you to the tranquil tea gardens of Japan.",
+      "price": 6.50,
+      "dish_type": 4,
+      "ingredients": [1, 14, 19],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 23,
+    "fields": {
+      "name": "Matcha Strawberry Milk Tea",
+      "description": "Experience a delightful fusion of flavors with our Matcha Strawberry Milk Tea. Revel in the earthy and vibrant taste of Japanese matcha tea combined with the sweetness of fresh strawberries, creating a vibrant and invigorating beverage that showcases the perfect harmony of fruity sweetness and the distinctive character of matcha.",
+      "price": 7.00,
+      "dish_type": 4,
+      "ingredients": [1, 6, 14, 19],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 24,
+    "fields": {
+      "name": "Strawberry Milk Tea",
+      "description": "Delight in the luscious combination of fresh strawberries, homemade strawberry jam, and your choice of milk in our Strawberry Milk Tea. This sweet and creamy concoction offers a burst of fruity goodness that perfectly complements the smoothness of milk, creating a delightful and refreshing beverage that will leave you craving more.",
+      "price": 6.50,
+      "dish_type": 4,
+      "ingredients": [1, 6, 17],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 25,
+    "fields": {
+      "name": "Oreo Milk Tea",
+      "description": "Treat yourself to a delightful twist with our Oreo Milk Tea. This playful and indulgent beverage combines crushed Oreo cookies with your choice of milk, creating a creamy and chocolatey concoction that offers a nostalgic and satisfying experience reminiscent of everyone's favorite cookie, dunked in milk.",
+      "price": 7.25,
+      "dish_type": 4,
+      "ingredients": [1, 20],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 26,
+    "fields": {
+      "name": "Passion Fruit Tea",
+      "description": "Indulge in the exotic and tantalizing flavors of our Passion Fruit Tea. Crafted with the essence of ripe passion fruits, this vibrant and refreshing beverage offers a delightful balance of tropical sweetness and tanginess, transporting you to sun-soaked tropical islands with every sip.",
+      "price": 6.00,
+      "dish_type": 5,
+      "ingredients": [14, 17, 21],
+      "cooks": [4]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 27,
+    "fields": {
+      "name": "Pineapple Jasmine Tea",
+      "description": "Experience the perfect blend of tropical paradise and delicate floral notes with our Pineapple Jasmine Tea. Combining the succulent flavors of juicy pineapples with the fragrant essence of jasmine tea, this delightful concoction provides a harmonious and invigorating drink that will transport you to lush tropical gardens and leave you feeling rejuvenated.",
+      "price": 6.00,
+      "dish_type": 5,
+      "ingredients": [14, 18, 22],
+      "cooks": [4]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 28,
+    "fields": {
+      "name": "Mango Green Tea",
+      "description": "Discover a tropical oasis in every sip with our Mango Green Tea. This refreshing beverage combines the vibrant and juicy flavors of ripe mangoes with the invigorating essence of green tea, creating a harmonious and rejuvenating fusion that is both refreshing and packed with antioxidants.",
+      "price": 6.50,
+      "dish_type": 5,
+      "ingredients": [14, 17, 23],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 29,
+    "fields": {
+      "name": "Lychee Green Tea",
+      "description": "Delight in the enchanting flavors of our Lychee Green Tea. This exquisite blend combines the delicate floral notes of lychee fruit with the rejuvenating qualities of green tea, resulting in a refreshing and subtly sweet beverage that offers a delightful balance of flavors and a hint of exoticism.",
+      "price": 6.50,
+      "dish_type": 5,
+      "ingredients": [14, 17, 24],
+      "cooks": [8]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 30,
+    "fields": {
+      "name": "Orange Juice",
+      "description": "",
+      "price": 1.75,
+      "dish_type": 6,
+      "ingredients": [25],
+      "cooks": [3]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 31,
+    "fields": {
+      "name": "Apple Juice",
+      "description": "",
+      "price": 1.75,
+      "dish_type": 6,
+      "ingredients": [26],
+      "cooks": [3]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 32,
+    "fields": {
+      "name": "Coca-Cola",
+      "description": "",
+      "price": 2.00,
+      "dish_type": 6,
+      "ingredients": [27],
+      "cooks": [3]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 33,
+    "fields": {
+      "name": "Fanta",
+      "description": "",
+      "price": 2.00,
+      "dish_type": 6,
+      "ingredients": [28],
+      "cooks": [3]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 34,
+    "fields": {
+      "name": "Sprite",
+      "description": "",
+      "price": 2.00,
+      "dish_type": 6,
+      "ingredients": [29],
+      "cooks": [3]
+    }
+  },
+  {
+    "model": "cafe.dish",
+    "pk": 35,
+    "fields": {
+      "name": "Water",
+      "description": "",
+      "price": 0.75,
+      "dish_type": 6,
+      "ingredients": [14],
+      "cooks": [3]
     }
   }
 ]
