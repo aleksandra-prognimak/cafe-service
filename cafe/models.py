@@ -33,6 +33,9 @@ class Dish(models.Model):
         related_name="dishes"
     )
 
+    class Meta:
+        verbose_name_plural = "dishes"
+
     def __str__(self):
         return f"{self.name} ({self.dish_type}, {self.price})"
 
