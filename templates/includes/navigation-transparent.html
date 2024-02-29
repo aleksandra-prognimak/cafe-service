@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
+  <div class="navbar-nav navbar-nav-hover w-100 justify-content-between">
+    <div class="nav-item dropdown dropdown-hover mx-2">
+      <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="material-icons me-2" style="font-size: 30px">menu</i>
+      </a>
+      <style>#dropdown-menu:before { display: none }</style>
+      <div class="dropdown-menu dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" id="dropdown-menu" aria-labelledby="dropdownMenuDocs">
+        <div class="d-none d-lg-block">
+          <ul class="list-group">
+            <li class="nav-item list-group-item border-0 p-0">
+              <a class="dropdown-item py-2 ps-3 border-radius-md" target="_blank" href="#">
+                <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Support</h6>
+                <span class="text-sm">Get support from experts (email and Discord)</span>
+              </a>
+            </li>
+            <li class="nav-item list-group-item border-0 p-0">
+              <a class="dropdown-item py-2 ps-3 border-radius-md" target="_blank" href="#">
+                <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Getting Started - UI Docs</h6>
+                <span class="text-sm">Explore this collection of fully designed components</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-item ms-lg-auto">
+      <a class="nav-link nav-link-icon me-2" href="{% url 'logout' %}">
+        <i class="material-icons me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout" style="font-size: 26px">logout</i>
+      </a>
+    </div>
+  </div>
+</nav>
