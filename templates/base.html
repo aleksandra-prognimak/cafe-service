@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ ASSETS_ROOT }}/img/apple-icon.png">
-  <link rel="icon" id="favicon" type="image/x-icon" href="{{ ASSETS_ROOT }}/img/favicon.ico">
+  <link rel="icon" id="favicon" type="image/x-icon" href="{{ ASSETS_ROOT }}/img/favicon.svg">
 
   <title>
     Django Material Kit 2 - {% block title %}{% endblock %} | AppSeed
@@ -28,8 +28,7 @@
 
 </head>
 
-<body class="{% block body_class %}{% endblock %} bg-gray-200">
-
+<body style="background-image: url({{ ASSETS_ROOT }}/img/bg.png)">
   {% block content %}{% endblock content %}  
 
   {% include 'includes/footer.html' %} 
