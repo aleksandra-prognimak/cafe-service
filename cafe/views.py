@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import DishType, Dish, Cook
 
 
-# @login_required
+@login_required
 def index(request):
     num_dishes = Dish.objects.count()
     num_cooks = Cook.objects.count()

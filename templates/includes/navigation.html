@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3">
-  <div class="navbar-nav navbar-nav-hover w-100 justify-content-between">
+  <div class="navbar-nav navbar-nav-hover w-100 justify-content-between flex-row">
     <div class="nav-item dropdown dropdown-hover mx-2">
-      <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="material-icons me-2" style="font-size: 40px; color: #171b23">menu</i>
+      <a class="nav-link ps-2 cursor-pointer" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="material-icons" style="font-size: 40px">menu</i>
       </a>
       <style>#dropdown-menu:before { display: none }</style>
       <div class="dropdown-menu dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" id="dropdown-menu" aria-labelledby="dropdownMenuDocs">
@@ -26,8 +26,8 @@
     </div>
 
     <div class="nav-item ms-lg-auto">
-      <a class="nav-link nav-link-icon me-2" href="{% url 'logout' %}">
-        <i class="material-icons me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout" style="font-size: 34px; color: #171b23">logout</i>
+      <a class="nav-link nav-link-icon" href="{% url 'logout' %}">
+        <i class="material-icons" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout" style="font-size: 34px">logout</i>
       </a>
     </div>
   </div>

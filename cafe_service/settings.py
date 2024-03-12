@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_bootstrap4",
+    "crispy_forms",
     "cafe"
 ]
 
@@ -95,4 +97,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "cafe.Cook"
 
+LOGIN_REDIRECT_URL = "/"
+
 ASSETS_ROOT = "/static/assets"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
