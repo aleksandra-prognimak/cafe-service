@@ -29,6 +29,10 @@
 </head>
 
 <body style="background-image: url({{ ASSETS_ROOT }}/img/bg.png)">
+  {% if request.user.is_authenticated %}
+    {% include 'includes/navigation.html' %}
+  {% endif %}
+  
   {% block content %}{% endblock content %}  
 
   {% include 'includes/footer.html' %} 
