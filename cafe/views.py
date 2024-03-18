@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import DishForm
+from .forms import DishForm, CookCreationForm, CookExperienceUpdateForm
 from .models import DishType, Dish, Cook
 
 
@@ -76,6 +76,31 @@ class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
     success_url = reverse_lazy("cafe:menu-list")
 
 
+class CookListView(LoginRequiredMixin, generic.ListView):
+    model = Cook
+    extra_context = {"url_chefs": True}
+
+
 class CookDetailView(LoginRequiredMixin, generic.DetailView):
     model = Cook
     extra_context = {"url_chefs": True}
+
+
+class CookCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Cook
+    extra_context = {"url_chefs": True}
+    form_class = CookCreationForm
+    success_url = reverse_lazy("cafe:chef-list")
+
+
+class CookExperienceUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Cook
+    extra_context = {"url_chefs": True}
+    form_class = CookExperienceUpdateForm
+    success_url = reverse_lazy("cafe:chef-list")
+
+
+class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Cook
+    extra_context = {"chefs": True}
+    success_url = reverse_lazy("cafe:chef-list")

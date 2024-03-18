@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-header align-items-start" style="min-height: calc(100vh - 69px)" loading="lazy">
+    <div class="container" style="max-width: 1000px">
+      <div class="d-flex justify-content-center align-items-center pt-4 pb-5">
+        <img class="d-lg-block w-25" src="{{ ASSETS_ROOT }}/img/logo.svg" alt="logo">
+      </div>
+      <div class="card blur shadow-blur box-shadow-xl overflow-hidden">
+        <div class="card card-plain">
+          <div class="pt-3 px-4">
+            <h1 class="font-weight-bolder text-center">
+              Chefs
+            </h1>
+            <h6 class="text-center m-0">
+              Our chefs are culinary artists.  
+            </h6>
+            <h6 class="text-center m-0">
+              From savory symphonies to sweet serenades, their creations are a delight for both palate and eye.
+            </h6>
+          </div>
+
+          <div class="card-body">
+            <ul class="list-group list-group-flush mb-5">
+              {% for cook in cook_list %}
+                <li class="list-group-item border-0" style="background: none">
+                  <a href="{% url 'cafe:chef-detail' cook.id %}">
+                    <div class="text-dark d-flex justify-content-center align-items-center">
+                      <h5>{{ cook.first_name }} {{ cook.last_name }} ({{ cook.years_of_experience }} year{% if cook.years_of_experience > 1 %}s{% endif %} experience)</h5>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+
+            <h6 class="text-center">
+              New chef? Add his!
+            </h6>
+            <div class="d-flex justify-content-center align-items-center">
+              <a href="{% url "cafe:chef-create" %}" class="btn btn-sm bg-gradient-danger mb-0">Add new chef</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

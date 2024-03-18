@@ -39,7 +39,9 @@
               <ul class="list-group list-group-flush">
               {% for chef in dish.cooks.all %}
                 <li class="list-group-item border-0 pb-0" style="background: none">
-                  {{ chef }}
+                  <a href="{% url 'cafe:chef-detail' chef.id %}" class="text-dark">
+                    {{ chef }}
+                  </a>
                 </li>
                 {% empty %}
                 <li class="list-group-item border-0" style="background: none">
@@ -48,20 +50,6 @@
               {% endfor %}
               </ul>
             </div>
-{#            <ul class="list-group list-group-flush mb-5">#}
-{#              {% for dish in dishtype.dish_set.all %}#}
-{#                <li class="list-group-item border-0" style="background: none">#}
-{#                  <a href="#">#}
-{#                    <div class="text-dark d-flex justify-content-between">#}
-{#                      <h6>{{ dish.name }}</h6>#}
-{#                      <span>${{ dish.price }}</span>#}
-{#                    </div>#}
-{#                  </a>#}
-{#                </li>#}
-{#                {% empty %}#}
-{#                  <div class="text-center">No position yet</div>#}
-{#              {% endfor %}#}
-{#            </ul>#}
           
             <h6 class="text-center">
               Irrelevant position? Remove it!
