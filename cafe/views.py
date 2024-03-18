@@ -21,6 +21,13 @@ def index(request):
     return render(request, "cafe/index.html", context=context)
 
 
+@login_required
+def contacts(request):
+    context = {"url_contact": True}
+
+    return render(request, "cafe/contacts.html", context=context)
+
+
 class DishTypeListView(LoginRequiredMixin, generic.ListView):
     model = DishType
     extra_context = {"url_menu": True}
