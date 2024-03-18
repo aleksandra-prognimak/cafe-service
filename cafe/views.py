@@ -24,3 +24,28 @@ def index(request):
 class DishTypeListView(LoginRequiredMixin, generic.ListView):
     model = DishType
     extra_context = {"url_menu": True}
+
+
+class DishTypeDetailView(LoginRequiredMixin, generic.DetailView):
+    model = DishType
+    extra_context = {"url_menu": True}
+
+
+class DishTypeCreateView(LoginRequiredMixin, generic.CreateView):
+    model = DishType
+    extra_context = {"url_menu": True}
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:menu-list")
+
+
+class DishTypeUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = DishType
+    extra_context = {"url_menu": True}
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:menu-list")
+
+
+class DishTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = DishType
+    extra_context = {"url_menu": True}
+    success_url = reverse_lazy("cafe:menu-list")

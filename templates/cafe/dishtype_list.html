@@ -8,7 +8,7 @@
       </div>
       <div class="card blur shadow-blur box-shadow-xl overflow-hidden">
         <div class="card card-plain">
-          <div class="pt-3 px-7">
+          <div class="pt-3 px-4">
             <h1 class="font-weight-bolder text-center">
               Menu
             </h1>
@@ -21,12 +21,14 @@
           </div>
 
           <div class="card-body">
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush mb-5">
               {% for dishtype in dishtype_list %}
                 <li class="list-group-item border-0" style="background: none">
-                  <h4 class="d-flex justify-content-center align-items-center">
-                    {{ dishtype.name }}
-                  </h4>
+                  <a href="{% url 'cafe:menu-detail' dishtype.id %}">
+                    <div class="text-dark d-flex justify-content-center align-items-center">
+                      <h4>{{ dishtype.name }}</h4>
+                    </div>
+                  </a>
                   <ul class="list-group list-group-flush">
                     {% for dish in dishtype.dish_set.all %}
                       <li class="list-group-item border-0" style="background: none">
@@ -37,11 +39,21 @@
                           </div>
                         </a>
                       </li>
+                      {% empty %}
+                        <span class="text-center">No position yet</span>
                     {% endfor %}
                   </ul>
                 </li>
               {% endfor %}
             </ul>
+
+            <h6 class="text-center">
+              Are there new menu items? Add them!
+            </h6>
+            <div class="d-flex justify-content-center align-items-center">
+              <a href="{% url "cafe:menu-create" %}" class="btn btn-sm bg-gradient-danger mb-0 me-2">Add new section</a>
+              <a href="#" class="btn btn-sm bg-gradient-danger mb-0 mx-2">Add new position</a>
+            </div>
           </div>
         </div>
       </div>

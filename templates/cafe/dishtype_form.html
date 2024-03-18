@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="page-header align-items-start" style="min-height: calc(100vh - 69px)" loading="lazy">
+    <div class="container" style="max-width: 1000px">
+      <div class="d-flex justify-content-center align-items-center pt-4 pb-5">
+        <img class="d-lg-block w-25" src="{{ ASSETS_ROOT }}/img/logo.svg" alt="logo">
+      </div>
+      <div class="card blur shadow-blur box-shadow-xl overflow-hidden">
+        <div class="card card-plain">
+          <div class="pt-3 px-4">
+            <h2 class="font-weight-bolder text-center">
+              {{ object|yesno:"Update,Create" }} Menu Section
+            </h2>
+          </div>
+
+          <div class="card-body">
+            <form action="" method="post">
+              {% csrf_token %}
+              <div class="d-flex flex-column input-group input-group-outline mb-4">
+                {{ form|crispy }}
+              </div>
+              <div class="d-flex justify-content-end align-items-center">
+                <button class="btn btn-sm bg-gradient-danger" type="submit">
+                  {{ object|yesno:"Update,Add" }}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

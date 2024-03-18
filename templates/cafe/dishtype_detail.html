@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-header align-items-start" style="min-height: calc(100vh - 69px)" loading="lazy">
+    <div class="container" style="max-width: 1000px">
+      <div class="d-flex justify-content-center align-items-center pt-4 pb-5">
+        <img class="d-lg-block w-25" src="{{ ASSETS_ROOT }}/img/logo.svg" alt="logo">
+      </div>
+      <div class="card blur shadow-blur box-shadow-xl overflow-hidden">
+        <div class="card card-plain">
+          <div class="pt-3 px-4">
+            <h2 class="font-weight-bolder text-center">
+              {{ dishtype.name }}
+              <a class="text-dark" href="{% url 'cafe:menu-update' dishtype.id %}">
+                <i class="material-icons mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Update name">edit</i>
+              </a>
+            </h2>
+          </div>
+
+          <div class="card-body">
+            <ul class="list-group list-group-flush mb-5">
+              {% for dish in dishtype.dish_set.all %}
+                <li class="list-group-item border-0" style="background: none">
+                  <a href="#">
+                    <div class="text-dark d-flex justify-content-between">
+                      <h6>{{ dish.name }}</h6>
+                      <span>${{ dish.price }}</span>
+                    </div>
+                  </a>
+                </li>
+                {% empty %}
+                  <div class="text-center">No position yet</div>
+              {% endfor %}
+            </ul>
+          
+            <h6 class="text-center">
+              Irrelevant section? Remove it!
+            </h6>
+            <div class="d-flex justify-content-center align-items-center">
+              <a href="{% url 'cafe:menu-delete' dishtype.id %}" class="btn btn-sm bg-gradient-danger mb-0">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
