@@ -21,7 +21,7 @@
             <ul class="list-group list-group-flush mb-5">
               {% for dish in dishtype.dish_set.all %}
                 <li class="list-group-item border-0" style="background: none">
-                  <a href="#">
+                  <a href="{% url 'cafe:dish-detail' dish.id %}">
                     <div class="text-dark d-flex justify-content-between">
                       <h6>{{ dish.name }}</h6>
                       <span>${{ dish.price }}</span>

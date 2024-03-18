@@ -32,7 +32,7 @@
                   <ul class="list-group list-group-flush">
                     {% for dish in dishtype.dish_set.all %}
                       <li class="list-group-item border-0" style="background: none">
-                        <a href="#">
+                        <a href="{% url 'cafe:dish-detail' dish.id %}">
                           <div class="text-dark d-flex justify-content-between">
                             <h6>{{ dish.name }}</h6>
                             <span>${{ dish.price }}</span>
@@ -52,7 +52,7 @@
             </h6>
             <div class="d-flex justify-content-center align-items-center">
               <a href="{% url "cafe:menu-create" %}" class="btn btn-sm bg-gradient-danger mb-0 me-2">Add new section</a>
-              <a href="#" class="btn btn-sm bg-gradient-danger mb-0 mx-2">Add new position</a>
+              <a href="{% url "cafe:dish-create" %}" class="btn btn-sm bg-gradient-danger mb-0 mx-2">Add new position</a>
             </div>
           </div>
         </div>

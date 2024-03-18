@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import DishForm
 from .models import DishType, Dish, Cook
 
 
@@ -49,3 +49,33 @@ class DishTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = DishType
     extra_context = {"url_menu": True}
     success_url = reverse_lazy("cafe:menu-list")
+
+
+class DishDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Dish
+    extra_context = {"url_menu": True}
+
+
+class DishCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Dish
+    extra_context = {"url_menu": True}
+    form_class = DishForm
+    success_url = reverse_lazy("cafe:menu-list")
+
+
+class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Dish
+    extra_context = {"url_menu": True}
+    form_class = DishForm
+    success_url = reverse_lazy("cafe:menu-list")
+
+
+class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Dish
+    extra_context = {"url_menu": True}
+    success_url = reverse_lazy("cafe:menu-list")
+
+
+class CookDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Cook
+    extra_context = {"url_chefs": True}
