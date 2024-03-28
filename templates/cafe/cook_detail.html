@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-header align-items-start" style="min-height: calc(100vh - 69px)" loading="lazy">
+    <div class="container" style="max-width: 1000px">
+      <div class="d-flex justify-content-center align-items-center pt-4 pb-5">
+        <img class="d-lg-block w-25" src="{{ ASSETS_ROOT }}/img/logo.svg" alt="logo">
+      </div>
+      <div class="card blur shadow-blur box-shadow-xl overflow-hidden">
+        <div class="card card-plain">
+          <div class="pt-3 px-4">
+            <h2 class="font-weight-bolder text-center">
+              About {{ cook }}
+            </h2>
+          </div>
+
+          <div class="card-body px-5">
+            <div class="mb-3 text-dark">
+              <span class="fs-5 font-weight-bolder">Name: </span>
+              {{ cook.first_name }} {{ cook.last_name }}
+            </div>
+            <div class="mb-3 text-dark">
+              <span class="fs-5 font-weight-bolder">Username: </span>
+              {{ cook.username }}
+            </div>
+            <div class="mb-3 text-dark">
+              <span class="fs-5 font-weight-bolder">Years of experience: </span>
+              {{ cook.years_of_experience }}
+              <a class="text-dark" href="{% url 'cafe:chef-update' cook.id %}">
+                <i class="material-icons mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Update">edit</i>
+              </a>
+            </div>
+            <div class="mb-3 text-dark">
+              <span class="fs-5 font-weight-bolder">Menu positions: </span>
+              <ul class="list-group list-group-flush">
+              {% for dish in cook.dishes.all %}
+                <li class="list-group-item border-0 pb-0" style="background: none">
+                  <a href="{% url 'cafe:dish-detail' dish.id %}" class="text-dark">
+                    {{ dish }}
+                  </a>
+                </li>
+                {% empty %}
+                <li class="list-group-item border-0" style="background: none">
+                  No dishes yet
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+
+            <h6 class="text-center">
+              The chef quit? Remove his!
+            </h6>
+            <div class="d-flex justify-content-center align-items-center">
+              <a href="{% url 'cafe:chef-delete' cook.id %}" class="btn btn-sm bg-gradient-danger mb-0">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
