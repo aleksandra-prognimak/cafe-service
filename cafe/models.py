@@ -24,7 +24,7 @@ class Dish(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     dish_type = models.ForeignKey(
         DishType,
-        on_delete=models.DO_NOTHING
+        on_delete=models.CASCADE
     )
     ingredients = models.ManyToManyField(
         Ingredient,
