@@ -19,9 +19,12 @@
             <form action="" method="post">
               {% csrf_token %}
               <div class="d-flex justify-content-center align-items-center">
-                <button class="btn btn-sm bg-gradient-danger mb-0" type="submit">
+                <button class="btn btn-sm bg-gradient-danger mb-0 me-3" type="submit">
                   Yes, remove
                 </button>
+                <a href="{% url 'cafe:menu-list' %}" class="btn btn-sm btn-outline-danger mb-0" type="button">
+                  Cancel
+                </a>
               </div>
             </form>
           </div>
