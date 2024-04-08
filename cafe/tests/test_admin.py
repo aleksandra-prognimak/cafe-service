@@ -19,15 +19,15 @@ class AdminTests(TestCase):
 
     def test_cook_years_of_experience_listed(self):
         url = reverse("admin:cafe_cook_changelist")
-        res = self.client.get(url)
+        response = self.client.get(url)
 
-        self.assertContains(res, self.cook.years_of_experience)
+        self.assertContains(response, self.cook.years_of_experience)
 
     def test_cook_detail_years_of_experience_listed(self):
         url = reverse("admin:cafe_cook_change", args=[self.cook.id])
-        res = self.client.get(url)
+        response = self.client.get(url)
 
-        self.assertContains(res, self.cook.years_of_experience)
+        self.assertContains(response, self.cook.years_of_experience)
 
     def test_cook_detail_all_fields_listed(self):
         self.cook.first_name = "test_first"
@@ -35,8 +35,8 @@ class AdminTests(TestCase):
         self.cook.save()
 
         url = reverse("admin:cafe_cook_change", args=[self.cook.id])
-        res = self.client.get(url)
+        response = self.client.get(url)
 
-        self.assertContains(res, self.cook.years_of_experience)
-        self.assertContains(res, self.cook.first_name)
-        self.assertContains(res, self.cook.last_name)
+        self.assertContains(response, self.cook.years_of_experience)
+        self.assertContains(response, self.cook.first_name)
+        self.assertContains(response, self.cook.last_name)

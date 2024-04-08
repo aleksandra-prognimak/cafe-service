@@ -10,11 +10,11 @@ CHEFS_URL = reverse("cafe:chef-list")
 
 class PublicTests(TestCase):
     def test_login_required(self):
-        res_menu = self.client.get(MENU_URL)
-        res_chefs = self.client.get(CHEFS_URL)
+        response_menu = self.client.get(MENU_URL)
+        response_chefs = self.client.get(CHEFS_URL)
 
-        self.assertNotEqual(res_menu.status_code, 200)
-        self.assertNotEqual(res_chefs.status_code, 200)
+        self.assertEqual(response_menu.status_code, 302)
+        self.assertEqual(response_chefs.status_code, 302)
 
 
 class PrivatTests(TestCase):
@@ -50,10 +50,6 @@ class PrivatTests(TestCase):
             price=Decimal("7.3")
         )
 
-        ingredient1 = Ingredient.objects.create(name="test1")
-        ingredient2 = Ingredient.objects.create(name="test2")
-        ingredient3 = Ingredient.objects.create(name="test3")
-
         get_user_model().objects.create(
             username="test1",
             password="test123",
@@ -76,23 +72,23 @@ class PrivatTests(TestCase):
         )
 
     def test_retrive_menu_list(self):
-        res = self.client.get(MENU_URL)
+        response = self.client.get(MENU_URL)
         menu = DishType.objects.all()
 
-        self.assertEqual(res.status_code, 200)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(
-            list(res.context["dishtype_list"]),
+            list(response.context["dishtype_list"]),
             list(menu)
         )
-        self.assertTemplateUsed(res, "cafe/dishtype_list.html")
+        self.assertTemplateUsed(response, "cafe/dishtype_list.html")
 
     def test_retrive_chef_list(self):
-        res = self.client.get(CHEFS_URL)
+        response = self.client.get(CHEFS_URL)
         cooks = get_user_model().objects.all()
 
-        self.assertEqual(res.status_code, 200)
-        self.assertEqual(list(res.context["cook_list"]), list(cooks))
-        self.assertTemplateUsed(res, "cafe/cook_list.html")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(list(response.context["cook_list"]), list(cooks))
+        self.assertTemplateUsed(response, "cafe/cook_list.html")
 
     def test_create_driver(self):
         form_data = {

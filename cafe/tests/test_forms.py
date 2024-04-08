@@ -37,7 +37,7 @@ class FormTests(TestCase):
         form_data = {
             "name": "test",
             "description": "test",
-            "price": Decimal('17.5'),
+            "price": Decimal("17.5"),
             "dish_type": dish_type,
             "ingredients": ingredients,
             "cooks": cooks
