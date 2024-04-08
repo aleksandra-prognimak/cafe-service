@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 from cafe_service import settings
 
@@ -43,7 +44,16 @@ class Dish(models.Model):
 
 
 class Cook(AbstractUser):
-    years_of_experience = models.IntegerField(default=0)
+    MIN_YEARS_OF_EXPERIENCE = 0
+    MAX_YEARS_OF_EXPERIENCE = 80
+
+    years_of_experience = models.IntegerField(
+        default=0,
+        validators=[
+            MinValueValidator(MIN_YEARS_OF_EXPERIENCE),
+            MaxValueValidator(MAX_YEARS_OF_EXPERIENCE),
+        ]
+    )
 
     class Meta:
         verbose_name = "cook"
