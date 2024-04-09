@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <header>
+    <div class="page-header min-vh-75">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <img class="d-lg-block w-45" style="margin-top: -60px" src="{{ ASSETS_ROOT }}/img/logo.svg" alt="logo">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <section class="py-5" id="count-stats">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-3">
+            <h1 class="text-gradient text-danger" id="state1" countTo="{{ num_dishes }}">0</h1>
+            <h5>Dishes</h5>
+            <p>Our cafe serves the most delicious crêpes and coffee in the city!</p>
+          </div>
+          <div class="col-md-3">
+            <h1 class="text-gradient text-danger"><span id="state2" countTo="7">0</span>+</h1>
+            <h5>Years</h5>
+            <p>Years of experience and impeccable taste are the foundation of our masterpieces</p>
+          </div>
+          <div class="col-md-3">
+            <h1 class="text-gradient text-danger"><span id="state3" countTo="{{ num_cooks }}">0</span></h1>
+            <h5>Сhefs</h5>
+            <p>Our chefs are culinary masters who elevate dining to an art form</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
+            <div class="rotating-card-container" style="width: 400px;">
+              <div class="card card-rotate shadow-dark mt-md-0 mt-5">
+                <style>#front:after { background-image: url("{{ ASSETS_ROOT }}/img/img1.jpg"); background-position: center; background-size: cover; opacity: 1; }</style>
+                <div class="front" id="front" style="height: 450px; width: 400px; border: 30px solid white;">
+                </div>
+                <style>#back:after { background-image: url("{{ ASSETS_ROOT }}/img/img2.jpg"); background-position: center; background-size: cover; opacity: 1; }</style>
+                <div class="back" id="back" style="height: 450px; width: 400px; border: 30px solid white;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 ms-auto me-auto mt-lg-0 mt-4">
+            <div class="justify-content-start">
+              <h4>Some information about us</h4>
+              <p class="mb-2">
+                Crêpes & Co wasn't born out of necessity, but out of wanderlust. 
+                Two friends, Isabelle and Jean-Pierre, backpacked through Europe, enchanted by the diverse culinary traditions. 
+                In a quaint Parisian cafe, they stumbled upon the humble crepe, its versatility and simplicity leaving a lasting impression. 
+                They dreamt of bringing this piece of Parisian charm back home, a place where the aroma of freshly baked crepes would transport customers to the heart of France.
+              </p>
+              <p class="mb-4">
+                Years later, their dream materialized as Crêpes & Co 
+                From the beginning, it wasn't just about the food. 
+                Isabelle and Jean-Pierre poured their passion and wanderlust into the cafe, creating a warm and inviting atmosphere. 
+                The exposed brick walls showcased local artwork, while the playlist serenaded guests with French chansons. 
+                Crêpes & Co became a cultural hub, a place where people gathered not just for delicious food, but also for a taste of the Parisian spirit, one sweet or savory crepe at a time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="d-flex justify-content-center align-items-center pb-3">
+      <a href="{% url "cafe:menu-list" %}" class="btn btn-sm bg-gradient-danger mb-0">Menu</a>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block javascripts %}
+  <script type="text/javascript">
+    for (let i = 1; i <= 3; i++) {
+      const stateName = `state${i}`;
+      const state = document.getElementById(stateName);
+
+      if (state) {
+        const countUp = new CountUp(stateName, state.getAttribute("countTo"));
+
+        if (!countUp.error) countUp.start();
+        else console.error(countUp.error);
+      }
+    }
+  </script>
+
+  <script>
+    if (document.getElementsByClassName('page-header')) {
+      window.onscroll = debounce(() => {
+        const scrollPosition = window.pageYOffset;
+        const bgParallax = document.querySelector('.page-header');
+        const oVal = (window.scrollY / 3);
+        bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
+      }, 6);
+    }
+  </script>
+{% endblock javascripts %}

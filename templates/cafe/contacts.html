@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="page-header align-items-start" style="min-height: calc(100vh - 69px)" loading="lazy">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center pt-4 pb-5">
+        <img class="d-lg-block w-25" src="{{ ASSETS_ROOT }}/img/logo.svg" alt="logo">
+      </div>
+      <div class="card blur shadow-blur box-shadow-xl overflow-hidden">
+        <div class="card card-plain">
+          <div class="pt-3 px-4">
+            <h1 class="font-weight-bolder text-center mb-3">
+              Contacts
+            </h1>
+            <h6 class="text-center m-0">
+              We'd love to hear from you!
+            </h6>
+            <h6 class="text-center m-0">
+              Whether you have a question, feedback, or just want to chat about crepes, <br>feel free to reach out using one of the methods below:
+            </h6>
+          </div>
+
+          <div class="card-body">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
+                  <div class="card">
+                    <div class="card-header position-relative z-index-2">
+                      <a class="d-block shadow-dark">
+                        <img src="{{ ASSETS_ROOT }}/img/img3.jpg" alt="img-crepes" class="img-fluid border-radius-lg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 ms-auto me-auto mt-lg-0 mt-4">
+                  <div class="d-flex flex-column align-items-center">
+                    <div class="d-flex justify-content-around mb-5 w-100">
+                      <div class="text-dark">
+                        <div class="fs-5 font-weight-bolder mb-2">Call us</div>
+                        <div><a href="tel:+1 234 5555-55-55" class="text-dark">+1 234 5555-55-55</a></div>
+                        <div><a href="tel:+1 234 5555-66-66" class="text-dark">+1 234 5555-66-66</a></div>
+                      </div>
+                      <div class="text-dark">
+                        <div class="fs-5 font-weight-bolder mb-2">Email us</div>
+                        <div><a href="mailto:crepes&co@example.com" class="text-dark">crepes&co@example.com</a></div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-5 w-100">
+                      <div class="text-dark">
+                        <div class="fs-5 font-weight-bolder mb-2">Social Media</div>
+                        <div class="d-flex justify-content-around">
+                          <a href="#" class="text-dark"><i class="fab fa-facebook text-lg"></i></a>
+                          <a href="#" class="text-dark"><i class="fab fa-twitter text-lg"></i></a>
+                          <a href="#" class="text-dark"><i class="fab fa-instagram text-lg"></i></a>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <div class="fs-5 font-weight-bolder mb-2">Address</div>
+                        <a href="https://goo.gl/maps/FXUdJAppi1eZJfac6" class="text-dark">
+                          <div>400 first ave. suite 700</div>
+                          <div>Minneapolis, MN 55401</div>
+                        </a>
+                      </div>
+                    </div>
+                    <h6>We look forward to connecting with you!</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

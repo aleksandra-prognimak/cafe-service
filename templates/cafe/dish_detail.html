@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-header align-items-start" style="min-height: calc(100vh - 69px)" loading="lazy">
+    <div class="container" style="max-width: 1000px">
+      <div class="d-flex justify-content-center align-items-center pt-4 pb-5">
+        <img class="d-lg-block w-25" src="{{ ASSETS_ROOT }}/img/logo.svg" alt="logo">
+      </div>
+      <div class="card blur shadow-blur box-shadow-xl overflow-hidden">
+        <div class="card card-plain">
+          <div class="pt-3 px-4">
+            <h2 class="font-weight-bolder text-center">
+              {{ dish.name }}
+              <a class="text-dark" href="{% url 'cafe:dish-update' dish.id %}">
+                <i class="material-icons mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Update">edit</i>
+              </a>
+            </h2>
+          </div>
+
+          <div class="card-body">
+            <div class="mb-3 text-dark"><span class="fs-5 font-weight-bolder">Description: </span>{{ dish.description }}</div>
+            <div class="mb-3 text-dark"><span class="fs-5 font-weight-bolder">Price: </span>${{ dish.price }}</div>
+            <div class="mb-3 text-dark">
+              <span class="fs-5 font-weight-bolder">Ingredients: </span>
+              <ul class="list-group list-group-flush">
+              {% for ingredient in dish.ingredients.all %}
+                <li class="list-group-item border-0 pb-0" style="background: none">
+                  {{ ingredient }}
+                </li>
+                {% empty %}
+                <li class="list-group-item border-0" style="background: none">
+                  No ingredients
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+           <div class="mb-3 text-dark">
+              <span class="fs-5 font-weight-bolder">Сhefs: </span>
+              <ul class="list-group list-group-flush">
+              {% for chef in dish.cooks.all %}
+                <li class="list-group-item border-0 pb-0" style="background: none">
+                  <a href="{% url 'cafe:chef-detail' chef.id %}" class="text-dark">
+                    {{ chef }}
+                  </a>
+                </li>
+                {% empty %}
+                <li class="list-group-item border-0" style="background: none">
+                  No chefs
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+          
+            <h6 class="text-center">
+              Irrelevant position? Remove it!
+            </h6>
+            <div class="d-flex justify-content-center align-items-center">
+              <a href="{% url 'cafe:dish-delete' dish.id %}" class="btn btn-sm bg-gradient-danger mb-0">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
