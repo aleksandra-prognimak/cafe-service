@@ -7,9 +7,9 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "")
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
-DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
+DEBUG = "RENDER" not in os.environ
 
 ALLOWED_HOSTS = ["localhost"]
 
